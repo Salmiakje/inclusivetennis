@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Map Inclusive Tennis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <!-- (Optioneel) MarkerCluster CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Inclusive Tennis Activity</h1>
+    <p>Choose a marker on the map for more information</p>
+  </header>
+
+  <section class="controls">
+    <div class="filters">
+      <button class="chip active" data-filter="all">Alle</button>
+      <button class="chip" data-filter="academic">Deaf Tennis</button>
+      <button class="chip" data-filter="corporate">Blind Tennis</button>
+    </div>
+  </section>
+
+  <main class="layout">
+    <div id="map" class="map"></div>
+
+    <aside class="sidebar">
+      <h2 class="sidebar-title">Partners</h2>
+      <ul id="partner-list" class="partner-list"></ul>
+    </aside>
+  </main>
+
+  <!-- Popup (custom modal) voor uitgebreide info met afbeelding/knoppen -->
+  <div id="info-modal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" aria-label="Sluiten">&times;</button>
+      <img id="modal-img" alt="" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-text"></p>
+      <div class="modal-actions">
+        <a id="modal-site" class="btn" href="#" target="_blank" rel="noopener">Website</a>
+        <a id="modal-gmaps" class="btn outline" href="#" target="_blank" rel="noopener">Bekijk op Google Maps</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <!-- (Optioneel) MarkerCluster JS -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
