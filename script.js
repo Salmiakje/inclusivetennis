@@ -6,7 +6,7 @@ const partners = [
   {
     id: "wimbledon",
     name: "Wimbledon",
-    type: "academic", // of gebruik hier je eigen categorieën (bijv. 'deaf' / 'blind')
+    type: "Wheelchair", // of gebruik hier je eigen categorieën (bijv. 'deaf' / 'blind')
     lat: 51.4343, lng: -0.2140,
     img: "img/wimbledon.jpg",
     blurb: "Tennis location in London (Wimbledon).",
@@ -16,7 +16,7 @@ const partners = [
   {
     id: "manchester",
     name: "Manchester City Tennis Club",
-    type: "corporate",
+    type: "Deaf",
     lat: 53.4808, lng: -2.2426,
     img: "img/manchestercitytennisclub.jpg",
     blurb: "Manchester has a rich tennis tradition.",
@@ -26,7 +26,7 @@ const partners = [
   {
     id: "edinburgh",
     name: "Tennis Edinburgh",
-    type: "academic",
+    type: "Blind",
     lat: 55.9533, lng: -3.1883,
     img: "img/tennisedinburgh.jpg",
     blurb: "Play tennis in Edinburgh.",
