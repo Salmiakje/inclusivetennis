@@ -5,7 +5,7 @@ const partners = [
     name: "Wimbledon",
     type: "academic",
     lat: 51.4343, lng: -0.2140,
-    img: "img/Wimbledon.jpg",
+    img: "img/wimbledon.jpg",
     blurb: "Tennis location in Londen (Wimbledon).",
     website: "https://www.wimbledon.com/",
     gmaps: "https://www.google.com/maps?q=Wimbledon"
@@ -25,7 +25,7 @@ const partners = [
     name: "Tennis Edinburgh",
     type: "academic",
     lat: 55.9533, lng: -3.1883,
-    img: "img/Tennis-edinburgh.jpg",
+    img: "img/tennisedinburgh.jpg",
     blurb: "Play Tennis in Edinburgh.",
     website: "https://example.com/tennis-edinburgh",
     gmaps: "https://www.google.com/maps?q=Edinburgh"
