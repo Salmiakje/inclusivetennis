@@ -18,7 +18,7 @@ const partners = [
     name: "Manchester City Tennis Club",
     type: "corporate",
     lat: 53.4808, lng: -2.2426, // Central Manchester
-    img: "image/Manchester City Tennis Club.jpg",
+    img: "image/manchestercitycennisclub.jpg",
     blurb: "Partner in Manchester met rijke tennistraditie.",
     website: "https://example.com/manchester-tennis", // vervang door echte site
     gmaps: "https://www.google.com/maps?q=Manchester+City+Tennis+Club"
@@ -28,7 +28,7 @@ const partners = [
     name: "Tennis Edinburgh",
     type: "academic",
     lat: 55.9533, lng: -3.1883, // Edinburgh
-    img: "image/Tennis Edinburgh.jpg",
+    img: "image/tennisedinburgh.jpg",
     blurb: "Partner in Edinburgh, Schotland.",
     website: "https://example.com/tennis-edinburgh",
     gmaps: "https://www.google.com/maps?q=Edinburgh"
