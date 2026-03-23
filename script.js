@@ -8,7 +8,7 @@ const partners = [
     name: "Wimbledon",
     type: "academic", // academic | corporate
     lat: 51.4343, lng: -0.2140, // Wimbledon area (London, UK)
-    img: "image/wimbledon.jpg",
+    img: "img/wimbledon.jpg",
     blurb: "Tennislocatie in Londen (Wimbledon).",
     website: "https://www.wimbledon.com/", // voorbeeld
     gmaps: "https://www.google.com/maps?q=Wimbledon"
@@ -18,7 +18,7 @@ const partners = [
     name: "Manchester City Tennis Club",
     type: "corporate",
     lat: 53.4808, lng: -2.2426, // Central Manchester
-    img: "image/manchestercitycennisclub.jpg",
+    img: "img/manchestercitycennisclub.jpg",
     blurb: "Partner in Manchester met rijke tennistraditie.",
     website: "https://example.com/manchester-tennis", // vervang door echte site
     gmaps: "https://www.google.com/maps?q=Manchester+City+Tennis+Club"
@@ -28,7 +28,7 @@ const partners = [
     name: "Tennis Edinburgh",
     type: "academic",
     lat: 55.9533, lng: -3.1883, // Edinburgh
-    img: "image/tennisedinburgh.jpg",
+    img: "img/tennisedinburgh.jpg",
     blurb: "Partner in Edinburgh, Schotland.",
     website: "https://example.com/tennis-edinburgh",
     gmaps: "https://www.google.com/maps?q=Edinburgh"
