@@ -67,7 +67,7 @@ function createMarker(p) {
     <div style="width: 240px;">
       <div style="font-weight:700; margin-bottom:6px;">${p.name}</div>
       <div style="font-size:12px; color:#5a6a7d; margin-bottom:8px;">
-        ${p.type === 'academic' ? 'Academic' : 'Corporate'}
+        ${p.type === 'academic' ? 'Wheelchair Tennis' : 'Deaf Tennis' : 'Blind Tennis'}
       </div>
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
         <a href="${p.website}" target="_blank" rel="noopener" style="text-decoration:none; color:#004c97; font-weight:600;">Website</a>
@@ -113,7 +113,7 @@ function renderList(items) {
       <img class="partner-thumb" src="${safeImg}" alt="${p.name}">
       <div class="partner-meta">
         <h4 class="partner-name">${p.name}</h4>
-        <p class="partner-type">${p.type === 'academic' ? 'Academic' : 'Corporate'}</p>
+        <p class="partner-type">${p.type === 'academic' ? 'Wheelchair Tennis' : 'Deaf Tennis' : 'Blind Tennis'}</p>
       </div>
     `;
 
