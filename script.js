@@ -1,35 +1,83 @@
+
 const partners = [
   {
     id: "wimbledon",
     name: "Wimbledon",
-    type: "academic", // academic | corporate
-    lat: 51.4343, lng: -0.2140, // Wimbledon area (London, UK)
-    img: "img/wimbledon.jpg",
+    type: "academic",
+    lat: 51.4343, lng: -0.2140,
+    img: "img/Wimbledon.jpg",
     blurb: "Tennislocatie in Londen (Wimbledon).",
-    website: "https://www.wimbledon.com/", // voorbeeld
+    website: "https://www.wimbledon.com/",
     gmaps: "https://www.google.com/maps?q=Wimbledon"
   },
   {
     id: "manchester",
     name: "Manchester City Tennis Club",
     type: "corporate",
-    lat: 53.4808, lng: -2.2426, // Central Manchester
-    img: "img/manchestercitycennisclub.jpg",
+    lat: 53.4808, lng: -2.2426,
+    img: "img/manchester.jpg",
     blurb: "Partner in Manchester met rijke tennistraditie.",
-    website: "https://example.com/manchester-tennis", // vervang door echte site
+    website: "https://example.com/manchester-tennis",
     gmaps: "https://www.google.com/maps?q=Manchester+City+Tennis+Club"
   },
   {
     id: "edinburgh",
     name: "Tennis Edinburgh",
     type: "academic",
-    lat: 55.9533, lng: -3.1883, // Edinburgh
-    img: "img/tennisedinburgh.jpg",
+    lat: 55.9533, lng: -3.1883,
+    img: "img/Tennis-edinburgh.jpg",
     blurb: "Partner in Edinburgh, Schotland.",
     website: "https://example.com/tennis-edinburgh",
     gmaps: "https://www.google.com/maps?q=Edinburgh"
   }
 ];
+
+/* ---------- In je lijst-rendering: encodeURI voor paden met spaties ---------- */
+function renderList(items) {
+  const listEl = document.getElementById('partner-list');
+  listEl.innerHTML = '';
+  items.forEach(p => {
+    const li = document.createElement('li');
+    li.className = 'partner-item';
+    li.dataset.id = p.id;
+
+    const safeImg = encodeURI(p.img); // <-- belangrijk bij (oude) bestandsnamen met spaties
+
+    li.innerHTML = `
+      <img class="partner-thumb" src="${safeImg}" alt="${p.name}">
+      <div class="partner-meta">
+        <h4 class="partner-name">${p.name}</h4>
+        <p class="partner-type">${p.type === 'academic' ? 'Academic' : 'Corporate'}</p>
+      </div>
+    `;
+
+    li.addEventListener('click', () => {
+      const marker = markerById.get(p.id);
+      if (marker) {
+        map.setView(marker.getLatLng(), 8, { animate: true });
+        marker.openPopup();
+        openModal(p);
+        highlightListItem(p.id);
+      }
+    });
+
+    listEl.appendChild(li);
+  });
+}
+
+/* ---------- In je modal: ook encodeURI ---------- */
+function openModal(p) {
+  document.getElementById('modal-img').src = encodeURI(p.img);
+  document.getElementById('modal-title').textContent = p.name;
+  document.getElementById('modal-text').textContent = p.blurb || '';
+  document.getElementById('modal-site').href = p.website || '#';
+  document.getElementById('modal-gmaps').href = p.gmaps || '#';
+
+  const modal = document.getElementById('info-modal');
+  modal.classList.remove('hidden');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
 
 /* ---------- KAART INITIALISEREN (Leaflet) ---------- */
 const map = L.map('map', {scrollWheelZoom: true});
