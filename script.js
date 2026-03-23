@@ -15,7 +15,7 @@ const partners = [
     name: "Manchester City Tennis Club",
     type: "corporate",
     lat: 53.4808, lng: -2.2426,
-    img: "img/manchester.jpg",
+    img: "img/manchestercitytennisclub.jpg",
     blurb: "Partner in Manchester met rijke tennistraditie.",
     website: "https://example.com/manchester-tennis",
     gmaps: "https://www.google.com/maps?q=Manchester+City+Tennis+Club"
