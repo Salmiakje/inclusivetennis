@@ -6,7 +6,7 @@ const partners = [
     type: "academic",
     lat: 51.4343, lng: -0.2140,
     img: "img/Wimbledon.jpg",
-    blurb: "Tennislocatie in Londen (Wimbledon).",
+    blurb: "Tennis location in Londen (Wimbledon).",
     website: "https://www.wimbledon.com/",
     gmaps: "https://www.google.com/maps?q=Wimbledon"
   },
@@ -16,7 +16,7 @@ const partners = [
     type: "corporate",
     lat: 53.4808, lng: -2.2426,
     img: "img/manchestercitytennisclub.jpg",
-    blurb: "Partner in Manchester met rijke tennistraditie.",
+    blurb: "Manchester has a rich Tennis tradition",
     website: "https://example.com/manchester-tennis",
     gmaps: "https://www.google.com/maps?q=Manchester+City+Tennis+Club"
   },
@@ -26,7 +26,7 @@ const partners = [
     type: "academic",
     lat: 55.9533, lng: -3.1883,
     img: "img/Tennis-edinburgh.jpg",
-    blurb: "Partner in Edinburgh, Schotland.",
+    blurb: "Play Tennis in Edinburgh.",
     website: "https://example.com/tennis-edinburgh",
     gmaps: "https://www.google.com/maps?q=Edinburgh"
   }
