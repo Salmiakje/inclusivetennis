@@ -1,7 +1,3 @@
-* ---------- DATA: voeg hier jouw partners toe ---------- */
-/* Tip: je kunt bestandsnamen met spaties gebruiken, maar renamen naar
-   korte namen zonder spaties is robuuster. Ik laat hier jouw namen staan. */
-
 const partners = [
   {
     id: "wimbledon",
