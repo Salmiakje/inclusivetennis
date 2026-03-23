@@ -6,7 +6,7 @@ const partners = [
   {
     id: "wimbledon",
     name: "Wimbledon",
-    type: "Wheelchair Tennis", // of gebruik hier je eigen categorieën (bijv. 'deaf' / 'blind')
+    type: "academic", // of gebruik hier je eigen categorieën (bijv. 'deaf' / 'blind')
     lat: 51.4343, lng: -0.2140,
     img: "img/wimbledon.jpg",
     blurb: "Tennis location in London (Wimbledon).",
@@ -16,7 +16,7 @@ const partners = [
   {
     id: "manchester",
     name: "Manchester City Tennis Club",
-    type: "Deaf Tennis",
+    type: "corporate",
     lat: 53.4808, lng: -2.2426,
     img: "img/manchestercitytennisclub.jpg",
     blurb: "Manchester has a rich tennis tradition.",
@@ -26,7 +26,7 @@ const partners = [
   {
     id: "edinburgh",
     name: "Tennis Edinburgh",
-    type: "Blind Tennis",
+    type: "academic",
     lat: 55.9533, lng: -3.1883,
     img: "img/tennisedinburgh.jpg",
     blurb: "Play tennis in Edinburgh.",
@@ -44,7 +44,7 @@ const map = L.map('map', { scrollWheelZoom: true });
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   maxZoom: 18,
   attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    '&copy; https://www.openstreetmap.org/copyrightOpenStreetMap</a>'
 }).addTo(map);
 
 // Start: focus op UK
@@ -67,11 +67,11 @@ function createMarker(p) {
     <div style="width: 240px;">
       <div style="font-weight:700; margin-bottom:6px;">${p.name}</div>
       <div style="font-size:12px; color:#5a6a7d; margin-bottom:8px;">
-        ${p.type === 'academic' ? 'Wheelchair Tennis' : 'Deaf Tennis' : 'Blind Tennis'}
+        ${p.type === 'academic' ? 'Academic' : 'Corporate'}
       </div>
       <div style="display:flex; gap:8px; flex-wrap:wrap;">
-        <a href="${p.website}" target="_blank" rel="noopener" style="text-decoration:none; color:#004c97; font-weight:600;">Website</a>
-        <a href="${p.gmaps}" target="_blank" rel="noopener" style="text-decoration:none; color:#0077cc; font-weight:600;">Google Maps</a>
+        ${p.website}Website</a>
+        ${p.gmaps}Google Maps</a>
       </div>
     </div>
   `;
@@ -110,10 +110,10 @@ function renderList(items) {
     const safeImg = encodeURI(p.img);
 
     li.innerHTML = `
-      <img class="partner-thumb" src="${safeImg}" alt="${p.name}">
+      ${safeImg}
       <div class="partner-meta">
         <h4 class="partner-name">${p.name}</h4>
-        <p class="partner-type">${p.type === 'academic' ? 'Wheelchair Tennis' : 'Deaf Tennis' : 'Blind Tennis'}</p>
+        <p class="partner-type">${p.type === 'academic' ? 'Academic' : 'Corporate'}</p>
       </div>
     `;
 
@@ -211,4 +211,3 @@ document.addEventListener('keydown', (e) => {
     closeModal();
   }
 });
-
